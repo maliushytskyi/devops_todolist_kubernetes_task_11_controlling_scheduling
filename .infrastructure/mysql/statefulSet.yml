@@ -71,7 +71,7 @@ spec:
         nodeAffinity:
           requiredDuringSchedulingIgnoreDuringExecution:
             nodeSelectorTerms:
-              -matchExpressions:
+              matchExpressions:
                 - key: app
                   operator: In
                   values: 
@@ -84,7 +84,7 @@ spec:
                   operator: In
                   values:
                     - mysql
-              topologyKey: "kubernetes.io/hostaname"
+              topologyKey: "kubernetes.io/hostname"
       volumes:
       - name: config-map
         configMap:
